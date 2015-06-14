@@ -21,7 +21,7 @@ void TestScreen::Update(float delta)
     _systems->systemManager().Update(delta, UpdateStep::Input);
 }
 
-void ImpossibleScreen::Draw(float delta)
+void TestScreen::Draw(float delta)
 {
     _screenManager.Window.clear(sf::Color::Blue);
     _systems->systemManager().Update(delta, UpdateStep::Draw);

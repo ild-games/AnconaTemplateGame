@@ -1,6 +1,8 @@
 #ifndef $!GAME_ABBR!$_Core_PlatformBase_H_
 #define $!GAME_ABBR!$_Core_PlatformBase_H_
 
+#include "../Input/$!GAME_ABBR!$InputHandler.hpp"
+
 namespace ild
 {
 

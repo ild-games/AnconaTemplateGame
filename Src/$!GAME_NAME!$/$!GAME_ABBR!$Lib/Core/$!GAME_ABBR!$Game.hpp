@@ -1,6 +1,9 @@
 #ifndef $!GAME_ABBR!$_Core_$!GAME_ABBR!$Game_H_
 #define $!GAME_ABBR!$_Core_$!GAME_ABBR!$Game_H_
 
+#include <Ancona/Core2D/Core/Game.hpp>
+#include "PlatformBase.hpp"
+
 namespace ild
 {
 

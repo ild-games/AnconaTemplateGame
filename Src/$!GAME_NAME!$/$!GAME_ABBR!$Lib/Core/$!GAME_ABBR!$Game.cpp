@@ -1,3 +1,5 @@
+#include <Ancona/Framework/Resource/ResourceLoaderInit.hpp>
+
 #include "$!GAME_ABBR!$Game.hpp"
 #include "../Screens/TestScreen.hpp"
 

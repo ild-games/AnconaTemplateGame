@@ -2,6 +2,7 @@
 #define $!GAME_ABBR!$_Screens_TestScreen_H_
 
 #include <Ancona/Framework/Screens/AbstractScreen.hpp>
+#include "../Input/$!GAME_ABBR!$InputHandler.hpp"
 #include "../Systems/$!GAME_ABBR!$GameSystems.hpp"
 
 namespace ild

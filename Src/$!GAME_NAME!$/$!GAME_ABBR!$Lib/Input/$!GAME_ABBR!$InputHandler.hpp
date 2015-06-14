@@ -57,7 +57,7 @@ class $!GAME_ABBR!$InputComponent : public InputControlComponent
 
     private:
         Entity _playerEntity;
-        $!GAME_ABBR!$GameSystems & systems;
+        $!GAME_ABBR!$GameSystems & _systems;
 };
 
 }
