@@ -1,0 +1,23 @@
+#ifndef $!GAME_NAME!$_Input_GameTouch_H_
+#define $!GAME_NAME!$_Input_GameTouch_H_
+
+#include "$!GAME_NAME!$InputHandler.hpp"
+
+namespace ild
+{
+
+/**
+ * @brief Touch input handler for $!GAME_NAME!$
+ */
+class GameTouch: public $!GAME_NAME!$InputHandler
+{
+    public:
+        /**
+         * @brief Captures input and calls out to the inputComponent's actions.
+         */
+        virtual void HandleInput() override;
+};
+
+}
+
+#endif
