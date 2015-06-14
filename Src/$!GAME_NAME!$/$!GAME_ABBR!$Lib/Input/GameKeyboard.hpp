@@ -1,7 +1,7 @@
-#ifndef $!GAME_NAME!$_Input_GameKeyboard_H_
-#define $!GAME_NAME!$_Input_GameKeyboard_H_
+#ifndef $!GAME_ABBR!$_Input_GameKeyboard_H_
+#define $!GAME_ABBR!$_Input_GameKeyboard_H_
 
-#include "$!GAME_NAME!$InputHandler.hpp"
+#include "$!GAME_ABBR!$InputHandler.hpp"
 
 namespace ild
 {
@@ -9,7 +9,7 @@ namespace ild
 /**
  * @brief Keyboard handler for $!GAME_NAME!$
  */
-class GameKeyboard: public $!GAME_NAME!$InputHandler
+class GameKeyboard: public $!GAME_ABBR!$InputHandler
 {
     public:
         /**

@@ -1,5 +1,5 @@
-#ifndef $!GAME_NAME!$_Core_AndroidPlatform_H_
-#define $!GAME_NAME!$_Core_AndroidPlatform_H_
+#ifndef $!GAME_ABBR!$_Core_AndroidPlatform_H_
+#define $!GAME_ABBR!$_Core_AndroidPlatform_H_
 
 #include "PlatformBase.hpp"
 #include "../Input/GameTouch.hpp"

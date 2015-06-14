@@ -1,8 +1,8 @@
-#ifndef $!GAME_NAME!$_Screens_TestScreen_H_
-#define $!GAME_NAME!$_Screens_TestScreen_H_
+#ifndef $!GAME_ABBR!$_Screens_TestScreen_H_
+#define $!GAME_ABBR!$_Screens_TestScreen_H_
 
 #include <Ancona/Framework/Screens/AbstractScreen.hpp>
-#include "../Systems/$!GAME_NAME!$GameSystems.hpp"
+#include "../Systems/$!GAME_ABBR!$GameSystems.hpp"
 
 namespace ild
 {
@@ -21,7 +21,7 @@ class TestScreen : public AbstractScreen
          */
         TestScreen(
                 ScreenManager & manager,
-                $!GAME_NAME!$InputHandler * inputHandler);
+                $!GAME_ABBR!$InputHandler * inputHandler);
 
         /**
          * @brief Will be called just before Update is called for the
@@ -46,8 +46,8 @@ class TestScreen : public AbstractScreen
         /* getters and setters */
         ScreenSystemsContainer * systemsContainer() override { return _systems.get(); }
     private:
-        std::unique_ptr<$!GAME_NAME!$InputHandler> _inputHandler;
-        std::unique_ptr<$!GAME_NAME!$GameSystems> _systems;
+        std::unique_ptr<$!GAME_ABBR!$InputHandler> _inputHandler;
+        std::unique_ptr<$!GAME_ABBR!$GameSystems> _systems;
 };
 
 }

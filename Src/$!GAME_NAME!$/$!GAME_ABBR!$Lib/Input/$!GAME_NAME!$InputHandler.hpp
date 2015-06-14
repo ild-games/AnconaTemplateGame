@@ -1,21 +1,21 @@
-#ifndef $!GAME_NAME!$_Input_$!GAME_NAME!$InputHandler_H_
-#define $!GAME_NAME!$_Input_$!GAME_NAME!$InputHandler_H_
+#ifndef $!GAME_ABBR!$_Input_$!GAME_ABBR!$InputHandler_H_
+#define $!GAME_ABBR!$_Input_$!GAME_ABBR!$InputHandler_H_
 
 #include <Ancona/Core2D/InputDevices/InputHandler.hpp>
 #include <Ancona/Core2D/Systems/InputControlComponent.hpp>
 
-#include "../Systems/$!GAME_NAME!$GameSystems.hpp"
+#include "../Systems/$!GAME_ABBR!$GameSystems.hpp"
 
 namespace ild
 {
 
-class $!GAME_NAME!$GameSystems;
-class $!GAME_NAME!$InputComponent;
+class $!GAME_ABBR!$GameSystems;
+class $!GAME_ABBR!$InputComponent;
 
 /**
  * @brief Base InputHandler for $!GAME_NAME!$
  */
-class $!GAME_NAME!$InputHandler : public InputHandler
+class $!GAME_ABBR!$InputHandler : public InputHandler
 {
     public:
         /**
@@ -23,7 +23,7 @@ class $!GAME_NAME!$InputHandler : public InputHandler
          *
          * @param component InputComponent instance
          */
-        void RegisterInputComponent($!GAME_NAME!$InputComponent * component);
+        void RegisterInputComponent($!GAME_ABBR!$InputComponent * component);
 
         /**
          * @brief Captures input and calls out to the inputComponent's actions.
@@ -31,16 +31,16 @@ class $!GAME_NAME!$InputHandler : public InputHandler
         virtual void HandleInput() { };
 
         /* getters and setters */
-        void systems($!GAME_NAME!$GameSystems * systems) { _systems = systems; }
+        void systems($!GAME_ABBR!$GameSystems * systems) { _systems = systems; }
     protected:
-        $!GAME_NAME!$InputComponent * _playerComponent;
-        $!GAME_NAME!$GameSystems * _systems;
+        $!GAME_ABBR!$InputComponent * _playerComponent;
+        $!GAME_ABBR!$GameSystems * _systems;
 };
 
 /**
  * @brief InputComponent for game player interaction for $!GAME_NAME!$
  */
-class $!GAME_NAME!$InputComponent : public InputControlComponent
+class $!GAME_ABBR!$InputComponent : public InputControlComponent
 {
     public:
         /**
@@ -50,14 +50,14 @@ class $!GAME_NAME!$InputComponent : public InputControlComponent
          * @param systems GameSystems for $!GAME_NAME!$
          * @param inputHandler InputHandler for $!GAME_NAME!$
          */
-        $!GAME_NAME!$InputComponent(
+        $!GAME_ABBR!$InputComponent(
                 const Entity & player,
-                $!GAME_NAME!$GameSystems & systems,
-                $!GAME_NAME!$InputHandler & inputHandler);
+                $!GAME_ABBR!$GameSystems & systems,
+                $!GAME_ABBR!$InputHandler & inputHandler);
 
     private:
         Entity _playerEntity;
-        $!GAME_NAME!$GameSystems & systems;
+        $!GAME_ABBR!$GameSystems & systems;
 };
 
 }

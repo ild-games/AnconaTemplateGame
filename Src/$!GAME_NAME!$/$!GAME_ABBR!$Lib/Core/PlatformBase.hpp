@@ -1,5 +1,5 @@
-#ifndef $!GAME_NAME!$_Core_PlatformBase_H_
-#define $!GAME_NAME!$_Core_PlatformBase_H_
+#ifndef $!GAME_ABBR!$_Core_PlatformBase_H_
+#define $!GAME_ABBR!$_Core_PlatformBase_H_
 
 namespace ild
 {
@@ -11,7 +11,7 @@ class PlatformBase
 {
     public:
         /* getters and setters */
-        virtual $!GAME_NAME!$InputHandler * inputHandler() = 0;
+        virtual $!GAME_ABBR!$InputHandler * inputHandler() = 0;
 
 };
 

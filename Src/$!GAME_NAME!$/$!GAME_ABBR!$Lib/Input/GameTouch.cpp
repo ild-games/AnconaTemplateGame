@@ -1,4 +1,4 @@
-#include "../Systems/$!GAME_NAME!$GameSystems.hpp"
+#include "../Systems/$!GAME_ABBR!$GameSystems.hpp"
 #include "GameTouch.hpp"
 
 using namespace ild;

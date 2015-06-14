@@ -1,7 +1,7 @@
-#ifndef $!GAME_NAME!$_Input_GameTouch_H_
-#define $!GAME_NAME!$_Input_GameTouch_H_
+#ifndef $!GAME_ABBR!$_Input_GameTouch_H_
+#define $!GAME_ABBR!$_Input_GameTouch_H_
 
-#include "$!GAME_NAME!$InputHandler.hpp"
+#include "$!GAME_ABBR!$InputHandler.hpp"
 
 namespace ild
 {
@@ -9,7 +9,7 @@ namespace ild
 /**
  * @brief Touch input handler for $!GAME_NAME!$
  */
-class GameTouch: public $!GAME_NAME!$InputHandler
+class GameTouch: public $!GAME_ABBR!$InputHandler
 {
     public:
         /**

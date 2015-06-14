@@ -1,5 +1,5 @@
-#ifndef $!GAME_NAME!$_Core_$!GAME_NAME!$Game_H_
-#define $!GAME_NAME!$_Core_$!GAME_NAME!$Game_H_
+#ifndef $!GAME_ABBR!$_Core_$!GAME_ABBR!$Game_H_
+#define $!GAME_ABBR!$_Core_$!GAME_ABBR!$Game_H_
 
 namespace ild
 {
@@ -7,7 +7,7 @@ namespace ild
 /**
  * @brief Game class for initial game setup.
  */
-class $!GAME_NAME!$Game : public Game
+class $!GAME_ABBR!$Game : public Game
 {
 
     public:
@@ -18,7 +18,7 @@ class $!GAME_NAME!$Game : public Game
          * @param height Height of screen
          * @param platform PlatformBase for the platform launched on
          */
-        $!GAME_NAME!$Game(
+        $!GAME_ABBR!$Game(
                 int width,
                 int height,
                 PlatformBase * platform);

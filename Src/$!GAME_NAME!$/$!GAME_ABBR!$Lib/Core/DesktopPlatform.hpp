@@ -1,5 +1,5 @@
-#ifndef $!GAME_NAME!$_Core_DesktopPlatform_H_
-#define $!GAME_NAME!$_Core_DesktopPlatform_H_
+#ifndef $!GAME_ABBR!$_Core_DesktopPlatform_H_
+#define $!GAME_ABBR!$_Core_DesktopPlatform_H_
 
 #include "PlatformBase.hpp"
 #include "../Input/GameKeyboard.hpp"

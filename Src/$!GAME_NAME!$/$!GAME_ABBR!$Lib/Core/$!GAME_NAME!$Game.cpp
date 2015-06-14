@@ -1,9 +1,9 @@
-#include "$!GAME_NAME!$Game.hpp"
+#include "$!GAME_ABBR!$Game.hpp"
 #include "../Screens/TestScreen.hpp"
 
 using namespace ild;
 
-$!GAME_NAME!$Game::$!GAME_NAME!$Game(
+$!GAME_ABBR!$Game::$!GAME_ABBR!$Game(
         int width,
         int height,
         PlatformBase * platform) :
@@ -14,7 +14,7 @@ $!GAME_NAME!$Game::$!GAME_NAME!$Game(
     ResourceLoaderInit::Init();
 }
 
-void $!GAME_NAME!$Game::CreateInitialScreen()
+void $!GAME_ABBR!$Game::CreateInitialScreen()
 {
     _screenManager->Push(
             new TestScreen(*_screenManager, _platform->inputHandler()));

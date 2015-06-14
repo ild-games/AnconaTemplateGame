@@ -1,5 +1,5 @@
-#ifndef $!GAME_NAME!$_Systems_$!GAME_NAME!$GameSystems_H_
-#define $!GAME_NAME!$_Systems_$!GAME_NAME!$GameSystems_H_
+#ifndef $!GAME_ABBR!$_Systems_$!GAME_ABBR!$GameSystems_H_
+#define $!GAME_ABBR!$_Systems_$!GAME_ABBR!$GameSystems_H_
 
 #include <Ancona/Framework/EntityFramework/SystemManager.hpp>
 #include <Ancona/Framework/Screens/ScreenManager.hpp>
@@ -9,9 +9,9 @@ namespace ild
 {
 
 /**
- * @brief 
+ * @brief Game systems used by $!GAME_NAME!$
  */
-class $!GAME_NAME!$GameSystems : public ScreenSystemsContainer
+class $!GAME_ABBR!$GameSystems : public ScreenSystemsContainer
 {
     public:
         /**
@@ -19,7 +19,7 @@ class $!GAME_NAME!$GameSystems : public ScreenSystemsContainer
          *
          * @param screenManager Screen Manager for the game.
          */
-        $!GAME_NAME!$GameSystems(ScreenManager & screenManager);
+        $!GAME_ABBR!$GameSystems(ScreenManager & screenManager);
 
     private:
 };
