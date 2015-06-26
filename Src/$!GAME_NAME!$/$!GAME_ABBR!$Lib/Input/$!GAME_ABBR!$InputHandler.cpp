@@ -6,16 +6,14 @@
 using namespace ild;
 
 ///////////////////////////////
-// $!GAME_ABBR!$InputHandler //
-///////////////////////////////
+// $!GAME_ABBR!$InputHandler
 void $!GAME_ABBR!$InputHandler::RegisterInputComponent($!GAME_ABBR!$InputComponent * component)
 {
     _playerComponent = component;
 }
 
-/////////////////////////////////
-// $!GAME_ABBR!$InputComponent //
-/////////////////////////////////
+///////////////////////////////
+// $!GAME_ABBR!$InputComponent
 $!GAME_ABBR!$InputComponent::$!GAME_ABBR!$InputComponent(
         const Entity & player,
         $!GAME_ABBR!$GameSystems & systems,

@@ -6,5 +6,5 @@
 ##
 
 #Path to the resource folder
-ResourceRoot = @CMAKE_SOURCE_DIR@/resources/$!GAME_NAME!$
+ResourceRoot = @CMAKE_SOURCE_DIR@/resources/TemplateGame
 SaveData = save.dat
