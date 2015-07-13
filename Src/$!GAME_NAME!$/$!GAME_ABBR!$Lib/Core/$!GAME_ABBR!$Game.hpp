@@ -2,7 +2,7 @@
 #define $!GAME_ABBR!$_Core_$!GAME_ABBR!$Game_H_
 
 #include <Ancona/Core2D/Core/Game.hpp>
-#include "$!GAME_ABBR!$PlatformFactory.hpp.hpp"
+#include "$!GAME_ABBR!$PlatformFactory.hpp"
 
 namespace ild
 {
@@ -19,12 +19,12 @@ class $!GAME_ABBR!$Game : public Game
          *
          * @param width Width of screen
          * @param height Height of screen
-         * @param platform $!GAME_ABBR!$PlatformFactory.hpp for the platform launched on
+         * @param platform $!GAME_ABBR!$PlatformFactory for the platform launched on
          */
         $!GAME_ABBR!$Game(
                 int width,
                 int height,
-                $!GAME_ABBR!$PlatformFactory.hpp * platform);
+                $!GAME_ABBR!$PlatformFactory * platform);
 
     protected:
         /**
@@ -33,7 +33,7 @@ class $!GAME_ABBR!$Game : public Game
         void CreateInitialScreen();
 
     private:
-        $!GAME_ABBR!$PlatformFactory.hpp * _platform;
+        $!GAME_ABBR!$PlatformFactory * _platform;
 
 };
 

@@ -8,7 +8,7 @@ using namespace ild;
 $!GAME_ABBR!$Game::$!GAME_ABBR!$Game(
         int width,
         int height,
-        $!GAME_ABBR!$PlatformFactory.hpp * platform) :
+        $!GAME_ABBR!$PlatformFactory * platform) :
     Game(width, height, "$!GAME_FULL_NAME!$"),
     _platform(platform)
 {
