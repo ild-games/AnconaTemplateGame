@@ -13,10 +13,19 @@ endif(DESKTOP)
 
 ancona_add_target($!GAME_NAME!$ LINK_SFML
     SRC ${$!GAME_ABBR!$Src}
-    STATIC_LIBS $!GAME_ABBR!$_Lib ${Ancona_Libs}
+    LIBS $!GAME_ABBR!$_Lib ${ANCONA_LIBS} ${ANCONA_EXT_LIBS}
+    WHOLE_STATIC_LIBS ${ANCONA_WHOLE_EXT_LIBS}
     PLATFORMS ANDROID DESKTOP
-    INCLUDES ${CMAKE_CURRENT_LIST_DIR}/$!GAME_ABBR!$Lib)
+    INCLUDES ${CMAKE_CURRENT_LIST_DIR}/Src)
 
-configure_file(Config.txt ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$!GAME_NAME!$/Config.txt @ONLY)
-configure_file(save.dat ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$!GAME_NAME!$/save.dat COPYONLY)
-file(COPY Maps DESTINATION ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$!GAME_NAME!$)
+if(ANDROID)
+    set(AssetOutputDir ${CMAKE_BINARY_DIR}/Android/$!GAME_NAME!$/assets)
+    set(COMPILED_PRJ_SRC_DIR)
+elseif(DESKTOP)
+    set(AssetOutputDir ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$!GAME_NAME!$)
+    set(COMPILED_PRJ_SRC_DIR ${CMAKE_SRC_DIR}/)
+endif()
+
+configure_file(Config.txt ${AssetOutputDir}/Config.txt @ONLY)
+configure_file(save.dat ${AssetOutputDir}/save.dat COPYONLY)
+file(COPY Maps DESTINATION ${AssetOutputDir})

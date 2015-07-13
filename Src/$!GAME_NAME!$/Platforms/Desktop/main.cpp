@@ -1,7 +1,7 @@
 #include <Ancona/Framework/Config/Config.hpp>
 
 #include "../../$!GAME_ABBR!$Lib/Core/$!GAME_ABBR!$Game.hpp"
-#include "../../$!GAME_ABBR!$Lib/Core/DesktopPlatform.hpp"
+#include "../../$!GAME_ABBR!$Lib/Core/$!GAME_ABBR!$DesktopFactory.hpp"
 
 using namespace ild;
 
@@ -11,7 +11,7 @@ int main(int argc, const char *argv[])
 
     Config::Load("Config.txt");
 
-    $!GAME_ABBR!$Game game(800, 600, new DesktopPlatform());
+    $!GAME_ABBR!$Game game(800, 600, new $!GAME_ABBR!$DesktopFactory());
     game.Run();
     
     return 0;
