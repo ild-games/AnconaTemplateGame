@@ -10,7 +10,7 @@ namespace ild
 /**
  * @brief Everything needed to run on the Desktop platform.
  */
-class $!GAME_ABBR!$DesktopFactory : public ImpossiblePlatformFactory
+class $!GAME_ABBR!$DesktopFactory : public $!GAME_ABBR!$PlatformFactory
 {
     public:
         /* getters and setters */
