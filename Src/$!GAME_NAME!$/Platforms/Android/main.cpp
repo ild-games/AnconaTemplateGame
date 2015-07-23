@@ -1,6 +1,6 @@
 #include <Ancona/Framework/Config/Config.hpp>
-#include <Ancona/System/Android/AndroidPlatform.hpp>
-#include <Ancona/System/Platform.hpp>
+#include <Ancona/System/Android/AndroidFileOperations.hpp>
+#include <Ancona/System/FileOperations.hpp>
 
 #include "../../$!GAME_ABBR!$Lib/Core/$!GAME_ABBR!$Game.hpp"
 #include "../../$!GAME_ABBR!$Lib/Core/$!GAME_ABBR!$AndroidFactory.hpp"
