@@ -13,7 +13,12 @@ int main(int argc, const char *argv[])
 
     AndroidPlatform::assetManager((AAssetManager *) argv);
 
-    Config::Load(*Platform::GetInputFileStream("Config.txt"));
+    ANativeActivity * activity = (ANativeActivity *) argv;
+    AndroidFileOperations::internalPath(std::string(activity->internalDataPath));
+    AndroidFileOperations::assetManager(activity->assetManager);
+
+    Config::Load(*FileOperations::GetInputFileStream("Config.txt"));
+
 
     $!GAME_ABBR!$Game game(800, 600, new $!GAME_ABBR!$AndroidFactory());
     game.Run();

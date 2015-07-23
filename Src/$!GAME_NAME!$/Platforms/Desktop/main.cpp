@@ -9,7 +9,7 @@ int main(int argc, const char *argv[])
 {
     PolymorphicRegistration::RegisterType<SpriteDrawable>("ild::SpriteDrawable");
 
-    Config::Load("Config.txt");
+    Config::Load(*FileOperations::GetInputFileStream("Config.txt"));
 
     $!GAME_ABBR!$Game game(800, 600, new $!GAME_ABBR!$DesktopFactory());
     game.Run();
