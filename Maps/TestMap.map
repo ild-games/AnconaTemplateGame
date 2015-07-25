@@ -50,7 +50,7 @@
                                 "x": 0,
                                 "y": 0
                             },
-                            "image" {
+                            "image": {
                                 "__cpp_type": "ild::SoloImage",
                                 "textureKey": "duckLogo"
                             }
