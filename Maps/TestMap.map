@@ -3,17 +3,17 @@
     "assets": [
         {
             "type": "TexturePNG",
-            "key": "duck-logo"
+            "key": "duckLogo"
         }
     ],
     "entities": [
-        "duck-logo",
-        "screen-cam"
+        "duckLogo",
+        "screenCam"
     ],
     "systems": {
         "physics": {
             "components": {
-                "duck-logo": {
+                "duckLogo": {
                     "__cpp_type": "ild::PlatformPhysicsComponent",
                     "info": {
                         "position": {
@@ -26,8 +26,8 @@
         },
         "camera": {
             "components": {
-                "screen-cam": {
-                    "render-priority": 0,
+                "screenCam": {
+                    "renderPriority": 0,
                     "scale": 1.0,
                     "default": true,
                     "size": {
@@ -39,17 +39,20 @@
         },
         "drawable": {
             "components": {
-                "duck-logo": {
+                "duckLogo": {
                     "drawables": {
-                        "duck-logo-sprite": {
+                        "duckLogoSprite": {
                             "__cpp_type": "ild::SpriteDrawable",
-                            "key": "duck-logo-sprite",
-                            "texture-key": "duck-logo",
-                            "render-priority": 0,
-                            "priority-offset": 0,
-                            "position-offset": {
+                            "key": "duckLogoSprite",
+                            "renderPriority": 0,
+                            "priorityOffset": 0,
+                            "positionOffset": {
                                 "x": 0,
                                 "y": 0
+                            },
+                            "image" {
+                                "__cpp_type": "ild::SoloImage",
+                                "textureKey": "duckLogo"
                             }
                         }
                     }
