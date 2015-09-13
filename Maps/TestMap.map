@@ -40,6 +40,10 @@
         "drawable": {
             "components": {
                 "duckLogo": {
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    },
                     "drawables": {
                         "duckLogoSprite": {
                             "__cpp_type": "ild::SpriteDrawable",
@@ -49,6 +53,10 @@
                             "positionOffset": {
                                 "x": 0,
                                 "y": 0
+                            },
+                            "scale": {
+                                "x": 1,
+                                "y": 1
                             },
                             "image": {
                                 "__cpp_type": "ild::SoloImage",
