@@ -1,4 +1,8 @@
-#include <Ancona/Core2D/Systems/Drawable/SoloImage.hpp>
+#include <Ancona/Core2D/Systems/Drawable/ShapeDrawable.hpp>
+#include <Ancona/Core2D/Systems/Drawable/ImageDrawable.hpp>
+#include <Ancona/Core2D/Systems/Drawable/ContainerDrawable.hpp>
+#include <Ancona/Core2D/Systems/Drawable/TextDrawable.hpp>
+#include <Ancona/Core2D/Systems/Drawable/AnimatedDrawable.hpp>
 #include <Ancona/Framework/Config/Config.hpp>
 #include <Ancona/System/Android/AndroidFileOperations.hpp>
 #include <Ancona/System/FileOperations.hpp>
@@ -10,8 +14,12 @@ using namespace ild;
 
 int main(int argc, const char *argv[])
 {
-    PolymorphicRegistration::RegisterType<SpriteDrawable>("ild::SpriteDrawable");
-    PolymorphicRegistration::RegisterType<SoloImage>("ild::SoloImage");
+    PolymorphicRegistration::RegisterType<ShapeDrawable>("ild::ShapeDrawable");
+    PolymorphicRegistration::RegisterType<ImageDrawable>("ild::ImageDrawable");
+    PolymorphicRegistration::RegisterType<ContainerDrawable>("ild::ContainerDrawable");
+    PolymorphicRegistration::RegisterType<sf::RectangleShape>("sf::RectangleShape");
+    PolymorphicRegistration::RegisterType<TextDrawable>("ild::TextDrawable");
+    PolymorphicRegistration::RegisterType<AnimatedDrawable>("ild::AnimatedDrawable");
 
     ANativeActivity * activity = (ANativeActivity *) argv;
     AndroidFileOperations::internalPath(std::string(activity->internalDataPath));
