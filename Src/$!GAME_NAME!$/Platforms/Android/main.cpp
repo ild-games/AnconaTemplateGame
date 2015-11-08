@@ -18,6 +18,7 @@ int main(int argc, const char *argv[])
     PolymorphicRegistration::RegisterType<ImageDrawable>("ild::ImageDrawable");
     PolymorphicRegistration::RegisterType<ContainerDrawable>("ild::ContainerDrawable");
     PolymorphicRegistration::RegisterType<sf::RectangleShape>("sf::RectangleShape");
+    PolymorphicRegistration::RegisterType<sf::CircleShape>("sf::CircleShape");
     PolymorphicRegistration::RegisterType<TextDrawable>("ild::TextDrawable");
     PolymorphicRegistration::RegisterType<AnimatedDrawable>("ild::AnimatedDrawable");
 
