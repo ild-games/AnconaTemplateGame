@@ -28,21 +28,21 @@ class TestScreen : public AbstractScreen
          * @brief Will be called just before Update is called for the
          * first time.
          */
-        void Init();
+        void Init() override;
 
         /**
          * @brief Handles the update logic on the screen
          *
          * @param delta Seconds since last update.
          */
-        void Update(float delta);
+        void Update(float delta) override;
 
         /**
          * @brief Handles the draw logic on the screen
          *
          * @param delta Seconds since last draw.
          */
-        void Draw(float delta);
+        void Draw(float delta) override;
 
         /* getters and setters */
         ScreenSystemsContainer * systemsContainer() override { return _systems.get(); }
