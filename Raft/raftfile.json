@@ -1,0 +1,12 @@
+{
+    "dependencies" : [
+        {
+            "name" : "Ancona",
+            "repository" : {
+                "type" : "git",
+                "location" : "https://github.com/tlein/Ancona"
+            },
+            "buildSystem" : "raft"
+        }
+    ]
+}

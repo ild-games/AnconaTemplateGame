@@ -1,28 +1,32 @@
-set(PrototypeGameLib $!GAME_ABBR!$_Lib)
-set(PrototypeName $!GAME_NAME!$)
+{{=<% %>=}}
 
-add_subdirectory(Src/$!GAME_NAME!$/$!GAME_ABBR!$Lib)
+cmake_minimum_required(VERSION 2.8)
 
-if(ANDROID)
-    set($!GAME_ABBR!$Src Src/$!GAME_NAME!$/Platforms/Android/main.cpp)
-endif(ANDROID)
+project(<% gameName %>)
 
-if(DESKTOP)
-    set($!GAME_ABBR!$Src Src/$!GAME_NAME!$/Platforms/Desktop/main.cpp)
-endif(DESKTOP)
+include (${RAFT})
 
-ancona_add_target($!GAME_NAME!$ LINK_SFML
-    SRC ${$!GAME_ABBR!$Src}
-    LIBS $!GAME_ABBR!$_Lib ${ANCONA_LIBS} ${ANCONA_EXT_LIBS}
-    WHOLE_STATIC_LIBS ${ANCONA_WHOLE_EXT_LIBS}
-    PLATFORMS ANDROID DESKTOP
-    INCLUDES ${CMAKE_CURRENT_LIST_DIR}/Src)
+if(RAFT_IS_ANDROID)
+    set(GAME_SRC Src/<% gameName %>GAME_NAME!$/Platforms/Android/main.cpp)
+endif()
 
-if(ANDROID)
-    set(AssetOutputDir ${CMAKE_BINARY_DIR}/Android/$!GAME_NAME!$/assets)
+if(RAFT_IS_DESKTOP)
+    set(GAME_SRC Src/<% gameName %>GAME_NAME!$/Platforms/Desktop/main.cpp)
+endif()
+
+set (GAME_DEPS Ancona_Platformer Ancona_Core2D Ancona_Framework
+    Ancona_Util2D Ancona_Util Ancona_System
+    sfml-graphics sfml-window sfml-system jsoncpp)
+
+add_executable(<% gameName %>)
+target_link_libraries(<% gameName %> <%gameAbbr%>_Lib)
+target_link_libraries(<% gameName %> ${GAME_DEPS})
+
+if(RAFT_IS_ANDROID)
+    set(AssetOutputDir ${CMAKE_BINARY_DIR}/Android/<% gameName %>GAME_NAME!$/assets)
     set(COMPILED_PRJ_SRC_DIR)
-elseif(DESKTOP)
-    set(AssetOutputDir ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$!GAME_NAME!$)
+elseif(RAFT_IS_DESKTOP)
+    set(AssetOutputDir ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/<% gameName %>GAME_NAME!$)
     set(COMPILED_PRJ_SRC_DIR ${CMAKE_SOURCE_DIR}/)
 endif()
 

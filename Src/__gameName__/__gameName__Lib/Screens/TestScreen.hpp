@@ -1,28 +1,28 @@
-#ifndef $!GAME_ABBR!$_Screens_TestScreen_H_
-#define $!GAME_ABBR!$_Screens_TestScreen_H_
+#ifndef {{gameAbbr}}_Screens_TestScreen_H_
+#define {{gameAbbr}}_Screens_TestScreen_H_
 
 #include <Ancona/Framework/Screens/AbstractScreen.hpp>
-#include "../Input/$!GAME_ABBR!$InputHandler.hpp"
-#include "../Systems/$!GAME_ABBR!$GameSystems.hpp"
+#include "../Input/{{gameAbbr}}InputHandler.hpp"
+#include "../Systems/{{gameAbbr}}GameSystems.hpp"
 
 namespace ild
 {
 
 /**
- * @brief Generated test screen for $!GAME_NAME!$
+ * @brief Generated test screen for {{ gameName }}GAME_NAME!$
  */
 class TestScreen : public AbstractScreen
 {
     public:
         /**
-         * @brief Constructs the test screen for $!GAME_NAME!$
+         * @brief Constructs the test screen for {{ gameName }}GAME_NAME!$
          *
          * @param manager ScreenManager used by the game.
          * @param inputHandler InputHandler used by the screen.
          */
         TestScreen(
                 ScreenManager & manager,
-                $!GAME_ABBR!$InputHandler * inputHandler);
+                {{gameAbbr}}InputHandler * inputHandler);
 
         /**
          * @brief Will be called just before Update is called for the
@@ -47,8 +47,8 @@ class TestScreen : public AbstractScreen
         /* getters and setters */
         ScreenSystemsContainer * systemsContainer() override { return _systems.get(); }
     private:
-        std::unique_ptr<$!GAME_ABBR!$InputHandler> _inputHandler;
-        std::unique_ptr<$!GAME_ABBR!$GameSystems> _systems;
+        std::unique_ptr<{{gameAbbr}}InputHandler> _inputHandler;
+        std::unique_ptr<{{gameAbbr}}GameSystems> _systems;
 };
 
 }

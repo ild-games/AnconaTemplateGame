@@ -1,8 +1,8 @@
-#include "$!GAME_ABBR!$GameSystems.hpp"
+#include "{{gameAbbr}}GameSystems.hpp"
 
 using namespace ild;
 
-$!GAME_ABBR!$GameSystems::$!GAME_ABBR!$GameSystems(ScreenManager & screenManager) :
+{{gameAbbr}}GameSystems::{{gameAbbr}}GameSystems(ScreenManager & screenManager) :
     ScreenSystemsContainer(screenManager, 0)
 {
     _position = ConstructSystem<PositionSystem>("position", *_systemManager);

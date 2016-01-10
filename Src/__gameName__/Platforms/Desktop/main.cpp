@@ -4,11 +4,9 @@
 #include <Ancona/Core2D/Systems/Drawable/TextDrawable.hpp>
 #include <Ancona/Core2D/Systems/Drawable/AnimatedDrawable.hpp>
 #include <Ancona/Framework/Config/Config.hpp>
-#include <Ancona/System/Android/AndroidFileOperations.hpp>
-#include <Ancona/System/FileOperations.hpp>
 
-#include "../../$!GAME_ABBR!$Lib/Core/$!GAME_ABBR!$Game.hpp"
-#include "../../$!GAME_ABBR!$Lib/Core/$!GAME_ABBR!$AndroidFactory.hpp"
+#include "../../{{gameAbbr}}Lib/Core/{{gameAbbr}}Game.hpp"
+#include "../../{{gameAbbr}}Lib/Core/{{gameAbbr}}DesktopFactory.hpp"
 
 using namespace ild;
 
@@ -22,14 +20,9 @@ int main(int argc, const char *argv[])
     PolymorphicRegistration::RegisterType<TextDrawable>("ild::TextDrawable");
     PolymorphicRegistration::RegisterType<AnimatedDrawable>("ild::AnimatedDrawable");
 
-    ANativeActivity * activity = (ANativeActivity *) argv;
-    AndroidFileOperations::internalPath(std::string(activity->internalDataPath));
-    AndroidFileOperations::assetManager(activity->assetManager);
-
     Config::Load(*FileOperations::GetInputFileStream("Config.txt"));
 
-
-    $!GAME_ABBR!$Game game(800, 600, new $!GAME_ABBR!$AndroidFactory());
+    {{gameAbbr}}Game game(800, 600, new {{gameAbbr}}DesktopFactory());
     game.Run();
     
     return 0;
