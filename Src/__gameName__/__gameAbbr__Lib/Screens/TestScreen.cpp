@@ -4,11 +4,11 @@ using namespace ild;
 
 TestScreen::TestScreen(
         ScreenManager & manager,
-        $!GAME_ABBR!$InputHandler * inputHandler) :
+        {{gameAbbr}}InputHandler * inputHandler) :
     AbstractScreen("test-screen", manager),
     _inputHandler(inputHandler)
 {
-    _systems = std::unique_ptr<$!GAME_ABBR!$GameSystems>(new $!GAME_ABBR!$GameSystems(manager));
+    _systems = std::unique_ptr<{{gameAbbr}}GameSystems>(new {{gameAbbr}}GameSystems(manager));
 }
 
 void TestScreen::Init()

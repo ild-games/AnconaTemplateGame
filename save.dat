@@ -3,7 +3,7 @@
         {
             "name": "Profile1",
             "screen-maps": {
-                "test-screen": "$!GAME_NAME!$"
+                "test-screen": "{{ gameName }}"
             },
             "systems": {
             }

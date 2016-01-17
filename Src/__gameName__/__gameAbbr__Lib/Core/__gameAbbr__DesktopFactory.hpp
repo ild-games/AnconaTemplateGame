@@ -1,7 +1,7 @@
-#ifndef $!GAME_ABBR!$_Core_$!GAME_ABBR!$DesktopFactory_H_
-#define $!GAME_ABBR!$_Core_$!GAME_ABBR!$DesktopFactory_H_
+#ifndef {{gameAbbr}}_Core_{{gameAbbr}}DesktopFactory_H_
+#define {{gameAbbr}}_Core_{{gameAbbr}}DesktopFactory_H_
 
-#include "$!GAME_ABBR!$PlatformFactory.hpp"
+#include "{{gameAbbr}}PlatformFactory.hpp"
 #include "../Input/GameKeyboard.hpp"
 
 namespace ild
@@ -10,7 +10,7 @@ namespace ild
 /**
  * @brief Everything needed to run on the Desktop platform.
  */
-class $!GAME_ABBR!$DesktopFactory : public $!GAME_ABBR!$PlatformFactory
+class {{gameAbbr}}DesktopFactory : public {{gameAbbr}}PlatformFactory
 {
     public:
         /* getters and setters */

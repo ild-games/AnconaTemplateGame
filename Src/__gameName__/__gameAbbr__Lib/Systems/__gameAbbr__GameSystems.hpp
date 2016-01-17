@@ -1,5 +1,5 @@
-#ifndef $!GAME_ABBR!$_Systems_$!GAME_ABBR!$GameSystems_H_
-#define $!GAME_ABBR!$_Systems_$!GAME_ABBR!$GameSystems_H_
+#ifndef {{gameAbbr}}_Systems_{{gameAbbr}}GameSystems_H_
+#define {{gameAbbr}}_Systems_{{gameAbbr}}GameSystems_H_
 
 #include <Ancona/Core2D/Systems/CameraSystem.hpp>
 #include <Ancona/Core2D/Systems/Drawable/DrawableSystem.hpp>
@@ -14,17 +14,17 @@ namespace ild
 {
 
 /**
- * @brief Game systems used by $!GAME_NAME!$
+ * @brief Game systems used by {{ gameName }}GAME_NAME!$
  */
-class $!GAME_ABBR!$GameSystems : public ScreenSystemsContainer
+class {{gameAbbr}}GameSystems : public ScreenSystemsContainer
 {
     public:
         /**
-         * @brief Constructs the game systems for $!GAME_NAME!$
+         * @brief Constructs the game systems for {{ gameName }}GAME_NAME!$
          *
          * @param screenManager Screen Manager for the game.
          */
-        $!GAME_ABBR!$GameSystems(ScreenManager & screenManager);
+        {{gameAbbr}}GameSystems(ScreenManager & screenManager);
 
         /* getters and setters */
         DrawableSystem & drawable() { return *_drawable; }
