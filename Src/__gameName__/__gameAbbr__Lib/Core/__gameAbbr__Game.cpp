@@ -9,7 +9,7 @@ using namespace ild;
         int width,
         int height,
         {{gameAbbr}}PlatformFactory * platform) :
-    Game(width, height, "{{ gameName }}GAME_FULL_NAME!$"),
+    Game(width, height, "{{ gameName }}"),
     _platform(platform)
 {
     CreateInitialScreen();

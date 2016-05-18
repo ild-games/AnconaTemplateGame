@@ -4,8 +4,7 @@
             "name" : "Ancona",
             "repository" : {
                 "type" : "git",
-                "location" : "https://github.com/tlein/Ancona",
-                "branch" : "ANC-138-Seperate-Game-And-Engine"
+                "location" : "https://github.com/tlein/Ancona"
             },
             "buildSystem" : "raft"
         }

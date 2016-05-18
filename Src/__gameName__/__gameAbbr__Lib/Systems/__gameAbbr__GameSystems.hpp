@@ -14,13 +14,13 @@ namespace ild
 {
 
 /**
- * @brief Game systems used by {{ gameName }}GAME_NAME!$
+ * @brief Game systems used by {{ gameName }}
  */
 class {{gameAbbr}}GameSystems : public ScreenSystemsContainer
 {
     public:
         /**
-         * @brief Constructs the game systems for {{ gameName }}GAME_NAME!$
+         * @brief Constructs the game systems for {{ gameName }}
          *
          * @param screenManager Screen Manager for the game.
          */

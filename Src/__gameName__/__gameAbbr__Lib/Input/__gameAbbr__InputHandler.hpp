@@ -13,7 +13,7 @@ class {{gameAbbr}}GameSystems;
 class {{gameAbbr}}InputComponent;
 
 /**
- * @brief Base InputHandler for {{ gameName }}GAME_NAME!$
+ * @brief Base InputHandler for {{ gameName }}
  */
 class {{gameAbbr}}InputHandler : public InputHandler
 {
@@ -38,17 +38,17 @@ class {{gameAbbr}}InputHandler : public InputHandler
 };
 
 /**
- * @brief InputComponent for game player interaction for {{ gameName }}GAME_NAME!$
+ * @brief InputComponent for game player interaction for {{ gameName }}
  */
 class {{gameAbbr}}InputComponent : public InputControlComponent
 {
     public:
         /**
-         * @brief Constructs the input component used by {{ gameName }}GAME_NAME!$
+         * @brief Constructs the input component used by {{ gameName }}
          *
          * @param player Entity that represents the player.
-         * @param systems GameSystems for {{ gameName }}GAME_NAME!$
-         * @param inputHandler InputHandler for {{ gameName }}GAME_NAME!$
+         * @param systems GameSystems for {{ gameName }}
+         * @param inputHandler InputHandler for {{ gameName }}
          */
         {{gameAbbr}}InputComponent(
                 const Entity & player,
