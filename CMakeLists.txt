@@ -37,4 +37,6 @@ elseif(RAFT_IS_DESKTOP)
     set(AssetOutputDir ${CMAKE_BINARY_DIR}/)
 endif()
 
-configure_file(Config.txt ${AssetOutputDir}/Config.txt COPYONLY)
+configure_file(Config.txt ${AssetOutputDir}/Config.txt)
+configure_file(save.dat ${AssetOutputDir}/save.dat COPYONLY)
+file(COPY Maps/ DESTINATION ${AssetOutputDir}/Maps/)

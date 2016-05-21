@@ -9,13 +9,13 @@ namespace ild
 {
 
 /**
- * @brief Generated test screen for {{ gameName }}GAME_NAME!$
+ * @brief Generated test screen for {{ gameName }}
  */
 class TestScreen : public AbstractScreen
 {
     public:
         /**
-         * @brief Constructs the test screen for {{ gameName }}GAME_NAME!$
+         * @brief Constructs the test screen for {{ gameName }}
          *
          * @param manager ScreenManager used by the game.
          * @param inputHandler InputHandler used by the screen.

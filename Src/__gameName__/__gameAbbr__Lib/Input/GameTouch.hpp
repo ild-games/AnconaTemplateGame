@@ -7,7 +7,7 @@ namespace ild
 {
 
 /**
- * @brief Touch input handler for {{ gameName }}GAME_NAME!$
+ * @brief Touch input handler for {{ gameName }}
  */
 class GameTouch: public {{gameAbbr}}InputHandler
 {

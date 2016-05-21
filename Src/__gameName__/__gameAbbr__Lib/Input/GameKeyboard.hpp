@@ -7,7 +7,7 @@ namespace ild
 {
 
 /**
- * @brief Keyboard handler for {{ gameName }}GAME_NAME!$
+ * @brief Keyboard handler for {{ gameName }}
  */
 class GameKeyboard: public {{gameAbbr}}InputHandler
 {
