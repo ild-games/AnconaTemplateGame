@@ -48,7 +48,7 @@ class {{systemName}}System : public UnorderedSystem<{{systemName}}Component>
                 std::string name,
                 SystemManager & manager);
 
-        void Update(float delta);
+        void Update(float delta) override;
 
         {{systemName}}Component * CreateComponent(
                 const Entity & entity);
