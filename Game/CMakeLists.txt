@@ -7,24 +7,28 @@ project(<% gameName %>)
 include (${RAFT})
 
 #Set C++ Version to 11
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wall")
+if(WIN32)
+	SET(CMAKE_CXX_FLAGS WIN32 "${CMAKE_CXX_FLAGS}")
+else()
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wall")
+endif()
 
 if("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" AND NOT ANDROID)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 endif()
 
-set (GAME_DEPS 
-    
-    Ancona_Platformer 
-    Ancona_Core2D 
+set (GAME_DEPS
+
+    Ancona_Platformer
+    Ancona_Core2D
     Ancona_Framework
-    Ancona_Util2D 
-    Ancona_Util 
+    Ancona_Util2D
+    Ancona_Util
     Ancona_System
-   
-    sfml-graphics 
-    sfml-window 
-    sfml-system 
+
+    sfml-graphics
+    sfml-window
+    sfml-system
 
     jsoncpp)
 
