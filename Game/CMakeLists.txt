@@ -8,7 +8,7 @@ include (${RAFT})
 
 #Set C++ Version to 11
 if(WIN32)
-	SET(CMAKE_CXX_FLAGS WIN32 "${CMAKE_CXX_FLAGS}")
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 else()
 	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -Wall")
 endif()
@@ -43,8 +43,11 @@ if(RAFT_IS_ANDROID)
 elseif(RAFT_IS_DESKTOP)
     set(AssetOutputDir ${CMAKE_BINARY_DIR}/)
     set(GAME_SRC Src/<% gameName %>/Platforms/Desktop/main.cpp)
-
-    add_executable(<% gameName %> ${GAME_SRC})
+	if(WIN32)
+	    add_executable(<% gameName %> WIN32 ${GAME_SRC})
+	else()
+	    add_executable(<% gameName %> ${GAME_SRC})
+	endif()
 endif()
 
 target_link_libraries(<% gameName %> <%gameAbbr%>_Lib)
