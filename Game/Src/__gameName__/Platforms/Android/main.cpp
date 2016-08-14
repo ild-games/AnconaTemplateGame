@@ -1,3 +1,5 @@
+#include <SFML/System/NativeActivity.hpp>
+
 #include <Ancona/Core2D/Systems/Drawable/ShapeDrawable.hpp>
 #include <Ancona/Core2D/Systems/Drawable/ImageDrawable.hpp>
 #include <Ancona/Core2D/Systems/Drawable/ContainerDrawable.hpp>
@@ -22,7 +24,7 @@ int main(int argc, const char *argv[])
     PolymorphicRegistration::RegisterType<TextDrawable>("ild::TextDrawable");
     PolymorphicRegistration::RegisterType<AnimatedDrawable>("ild::AnimatedDrawable");
 
-    ANativeActivity * activity = (ANativeActivity *) argv;
+    ANativeActivity * activity = sf::getNativeActivity();
     AndroidFileOperations::internalPath(std::string(activity->internalDataPath));
     AndroidFileOperations::assetManager(activity->assetManager);
 
