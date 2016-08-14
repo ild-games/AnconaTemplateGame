@@ -1,0 +1,63 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.2'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.application'
+
+task copyCPPLibraries(type : Copy) {
+    from '../../Raft/libs/install/Android/armeabi/lib'
+    from '../../build/'
+    include '**.so'
+    into 'build/jniLibs/armeabi'
+}
+
+project.afterEvaluate {
+    preBuild.dependsOn copyCPPLibraries
+    preBuild.dependsOn copyAssets
+    preBuild.dependsOn copyMaps
+}
+
+task copyAssets(type : Copy) {
+    from '../../Config.txt'
+    from '../../save.dat'
+    into 'build/assets/'
+}
+
+task copyMaps(type : Copy) {
+    from '../../Maps'
+    into 'build/assets/Maps'
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.ild.FixSFML"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile "AndroidManifest.xml"
+            res.srcDirs "res"
+            jniLibs.srcDirs "build/jniLibs"
+            assets.srcDir "build/assets"
+        }
+    }
+}
