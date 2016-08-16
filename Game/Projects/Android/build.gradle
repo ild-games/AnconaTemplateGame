@@ -27,6 +27,7 @@ project.afterEvaluate {
     preBuild.dependsOn copyCPPLibraries
     preBuild.dependsOn copyAssets
     preBuild.dependsOn copyMaps
+    preBuild.dependsOn copyResources
 }
 
 task copyAssets(type : Copy) {
@@ -38,6 +39,11 @@ task copyAssets(type : Copy) {
 task copyMaps(type : Copy) {
     from '../../Maps'
     into 'build/assets/Maps'
+}
+
+task copyResources(type : Copy) {
+    from '../../resources'
+    into 'build/assets/resources'
 }
 
 android {

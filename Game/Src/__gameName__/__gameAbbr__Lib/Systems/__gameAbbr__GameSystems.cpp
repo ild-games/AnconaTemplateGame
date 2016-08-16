@@ -12,6 +12,7 @@ using namespace ild;
     _collision = ConstructSystem<CollisionSystem>("collision", *_systemManager,*_position);
     _action = ConstructSystem<ActionSystem>("action", *_systemManager, _position);
 
-    _collision->CreateType("0");
-    _collision->CreateType("1");
+    _collision->CreateType("none");
+    _collision->CreateType("player");
+    _collision->CreateType("ground");
 }
