@@ -26,9 +26,9 @@ set (GAME_DEPS
     Ancona_Util
     Ancona_System
 
-    sfml-graphics
-    sfml-window
-    sfml-system
+    sfml-graphics-d
+    sfml-window-d
+    sfml-system-d
 
     jsoncpp)
 
@@ -37,7 +37,7 @@ add_subdirectory(Src/<% gameName %>/<% gameAbbr %>Lib)
 if(RAFT_IS_ANDROID)
     set(AssetOutputDir ${CMAKE_BINARY_DIR}/Android/<% gameName %>/assets)
     set(GAME_SRC Src/<% gameName %>/Platforms/Android/main.cpp)
-    set(GAME_DEPS ${GAME_DEPS} -Wl,--whole-archive sfml-main -Wl,--no-whole-archive EGL android log)
+    set(GAME_DEPS ${GAME_DEPS} -Wl,--whole-archive sfml-main-d -Wl,--no-whole-archive EGL android log)
 
     add_library(<% gameName %> SHARED ${GAME_SRC})
 elseif(RAFT_IS_DESKTOP)
