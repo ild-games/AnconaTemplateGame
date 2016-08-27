@@ -1,120 +1,184 @@
 {
-  "key": "Template",
-  "assets": [],
-  "entities": [
-    "1",
-    "screenCam"
-  ],
-  "systems": {
-    "position": {
-      "components": {
-        "1": {
-          "position": {
-            "x": 0,
-            "y": 0
-          },
-          "velocity": {
-            "x": 0,
-            "y": 0
-          }
+    "key": "Template",
+    "systems": {
+        "position": {
+            "components": {
+                "0": {
+                    "position": {
+                        "x": -27.5,
+                        "y": -30.5
+                    },
+                    "velocity": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "1": {
+                    "position": {
+                        "x": -27,
+                        "y": 69
+                    },
+                    "velocity": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            }
+        },
+        "drawable": {
+            "components": {
+                "0": {
+                    "topDrawable": {
+                        "__cpp_type": "ild::ImageDrawable",
+                        "key": "ImageDrawable",
+                        "inactive": false,
+                        "renderPriority": 0,
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "rotation": 0,
+                        "positionOffset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "priorityOffset": 0,
+                        "type": 2,
+                        "textureKey": "textures/duckLogo",
+                        "isWholeImage": true,
+                        "textureRect": {
+                            "position": {
+                                "x": 0,
+                                "y": 0
+                            },
+                            "dimension": {
+                                "x": 0,
+                                "y": 0
+                            }
+                        }
+                    }
+                },
+                "1": {
+                    "topDrawable": {
+                        "drawables": [
+                            {
+                                "shape": {
+                                    "radius": 50,
+                                    "fillColor": {
+                                        "r": 128,
+                                        "g": 255,
+                                        "b": 255,
+                                        "a": 255
+                                    },
+                                    "__cpp_type": "sf::CircleShape"
+                                },
+                                "renderPriority": 0,
+                                "priorityOffset": 0,
+                                "rotation": 45,
+                                "positionOffset": {
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "inactive": false,
+                                "scale": {
+                                    "x": 0.3,
+                                    "y": 1
+                                },
+                                "key": "Shape0",
+                                "__cpp_type": "ild::ShapeDrawable"
+                            },
+                            {
+                                "shape": {
+                                    "radius": 50,
+                                    "fillColor": {
+                                        "r": 255,
+                                        "g": 128,
+                                        "b": 128,
+                                        "a": 255
+                                    },
+                                    "__cpp_type": "sf::CircleShape"
+                                },
+                                "renderPriority": 0,
+                                "priorityOffset": 0,
+                                "rotation": 45,
+                                "positionOffset": {
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "inactive": false,
+                                "scale": {
+                                    "x": 1,
+                                    "y": 0.3
+                                },
+                                "key": "Shape1",
+                                "__cpp_type": "ild::ShapeDrawable"
+                            }
+                        ],
+                        "renderPriority": 0,
+                        "priorityOffset": 0,
+                        "rotation": 0,
+                        "positionOffset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "inactive": false,
+                        "scale": {
+                            "x": 1,
+                            "y": 1
+                        },
+                        "key": "topDrawable",
+                        "__cpp_type": "ild::ContainerDrawable"
+                    }
+                }
+            }
+        },
+        "camera": {
+            "components": {
+                "screenCam": {
+                    "renderPriority": 0,
+                    "scale": 1,
+                    "size": {
+                        "x": 800,
+                        "y": 600
+                    },
+                    "default": true,
+                    "follows": ""
+                }
+            }
+        },
+        "collision": {
+            "components": {
+                "0": {
+                    "dimension": {
+                        "dimension": {
+                            "x": 10,
+                            "y": 10
+                        },
+                        "position": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "rotation": 0
+                    },
+                    "bodyType": "environment",
+                    "collisionType": "none",
+                    "oneWayNormal": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            }
         }
-      }
     },
-    "drawable": {
-      "components": {
-        "1": {
-          "topDrawable": {
-            "drawables": [
-              {
-                "shape": {
-                  "radius": 50,
-                  "fillColor": {
-                    "r": 128,
-                    "g": 255,
-                    "b": 255,
-                    "a": 255
-                  },
-                  "__cpp_type": "sf::CircleShape"
-                },
-                "renderPriority": 0,
-                "priorityOffset": 0,
-                "rotation": 45,
-                "positionOffset": {
-                  "x": 0,
-                  "y": 0
-                },
-                "inactive": false,
-                "scale": {
-                  "x": 0.3,
-                  "y": 1
-                },
-                "key": "Shape0",
-                "__cpp_type": "ild::ShapeDrawable"
-              },
-              {
-                "shape": {
-                  "radius": 50,
-                  "fillColor": {
-                    "r": 255,
-                    "g": 128,
-                    "b": 128,
-                    "a": 255
-                  },
-                  "__cpp_type": "sf::CircleShape"
-                },
-                "renderPriority": 0,
-                "priorityOffset": 0,
-                "rotation": 45,
-                "positionOffset": {
-                  "x": 0,
-                  "y": 0
-                },
-                "inactive": false,
-                "scale": {
-                  "x": 1,
-                  "y": 0.3
-                },
-                "key": "Shape1",
-                "__cpp_type": "ild::ShapeDrawable"
-              }
-            ],
-            "renderPriority": 0,
-            "priorityOffset": 0,
-            "rotation": 0,
-            "positionOffset": {
-              "x": 0,
-              "y": 0
-            },
-            "inactive": false,
-            "scale": {
-              "x": 1,
-              "y": 1
-            },
-            "key": "topDrawable",
-            "__cpp_type": "ild::ContainerDrawable"
-          }
+    "entities": [
+        "1",
+        "screenCam",
+        "0"
+    ],
+    "assets": [
+        {
+            "type": "TexturePNG",
+            "key": "textures/duckLogo"
         }
-      }
-    },
-    "collision": {
-      "components": {}
-    },
-    "camera": {
-      "components": {
-        "screenCam": {
-          "renderPriority": 0,
-          "scale": 1,
-          "size": {
-            "x": 800,
-            "y": 600
-          },
-          "default": true,
-          "follows": ""
-        }
-      }
-    },
-    "action": {
-      "components": {}
-    }
-  }
+    ]
 }
