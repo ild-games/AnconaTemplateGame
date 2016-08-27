@@ -27,17 +27,23 @@ project.afterEvaluate {
     preBuild.dependsOn copyCPPLibraries
     preBuild.dependsOn copyAssets
     preBuild.dependsOn copyMaps
+    preBuild.dependsOn copyResources
 }
 
 task copyAssets(type : Copy) {
-    from '../../Config.txt'
-    from '../../save.dat'
+    from '../../build/Android/{{gameName}}/assets/Config.txt'
+    from '../../build/Android/{{gameName}}/assets/save.dat'
     into 'build/assets/'
 }
 
 task copyMaps(type : Copy) {
-    from '../../Maps'
+    from '../../build/Android/{{gameName}}/assets/Maps'
     into 'build/assets/Maps'
+}
+
+task copyResources(type : Copy) {
+    from '../../build/Android/{{gameName}}/assets/resources'
+    into 'build/assets/resources'
 }
 
 android {
@@ -45,7 +51,7 @@ android {
     buildToolsVersion "24.0.1"
 
     defaultConfig {
-        applicationId "com.ild.FixSFML"
+        applicationId "com.ild.{{gameName}}"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
