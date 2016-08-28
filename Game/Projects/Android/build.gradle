@@ -37,8 +37,8 @@ task copyAssets(type : Copy) {
 }
 
 task copyMaps(type : Copy) {
-    from '../../build/Android/{{gameName}}/assets/Maps'
-    into 'build/assets/Maps'
+    from '../../maps'
+    into 'build/assets/maps'
 }
 
 task copyResources(type : Copy) {
