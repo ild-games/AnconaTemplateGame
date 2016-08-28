@@ -50,4 +50,4 @@ target_link_libraries(<% gameName %> ${GAME_DEPS})
 
 configure_file(Config.txt ${AssetOutputDir}/Config.txt)
 configure_file(save.dat ${AssetOutputDir}/save.dat COPYONLY)
-file(COPY Maps/ DESTINATION ${AssetOutputDir}/Maps/)
+file(COPY maps/ DESTINATION ${AssetOutputDir}/maps/)
