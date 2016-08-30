@@ -3,7 +3,7 @@
         {
             "name": "Profile1",
             "screen-maps": {
-                "test-screen": "Template"
+                "test-screen": "map1"
             },
             "systems": {
             }

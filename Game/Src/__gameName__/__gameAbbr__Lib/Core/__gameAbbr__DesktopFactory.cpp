@@ -2,7 +2,7 @@
 
 using namespace ild;
 
-GameKeyboard * {{gameAbbr}}DesktopFactory::inputHandler()
+GameKeyboardAndMouse * {{gameAbbr}}DesktopFactory::inputHandler()
 {
-    return new GameKeyboard();
+    return new GameKeyboardAndMouse();
 }

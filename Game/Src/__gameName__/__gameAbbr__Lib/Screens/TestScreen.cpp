@@ -1,4 +1,5 @@
 #include "TestScreen.hpp"
+#include "../Factories/PlayerFactory.hpp"
 
 using namespace ild;
 
@@ -13,6 +14,7 @@ TestScreen::TestScreen(
 
 void TestScreen::Init()
 {
+    PlayerFactory::Initialize(_systems.get(), _inputHandler.get());
 }
 
 void TestScreen::Update(float delta)

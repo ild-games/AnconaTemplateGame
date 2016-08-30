@@ -2,6 +2,7 @@
 #define {{gameAbbr}}_Systems_{{gameAbbr}}GameSystems_H_
 
 #include <Ancona/Core2D/Systems/CameraSystem.hpp>
+#include <Ancona/Core2D/Systems/RotateSystem.hpp>
 #include <Ancona/Core2D/Systems/Drawable/DrawableSystem.hpp>
 #include <Ancona/Core2D/Systems/InputControlSystem.hpp>
 #include <Ancona/Core2D/Systems/Collision/CollisionSystem.hpp>
@@ -31,6 +32,7 @@ class {{gameAbbr}}GameSystems : public ScreenSystemsContainer
         InputControlSystem & input() { return *_input; }
         PositionSystem & position() { return *_position; }
         ActionSystem & action() { return *_action; }
+        RotateSystem & rotate() { return *_rotate; }
         CameraSystem & camera() { return *_camera; }
         CollisionSystem & collision() { return *_collision; }
         CollisionType nullCollision() { return 0; }
@@ -59,6 +61,10 @@ class {{gameAbbr}}GameSystems : public ScreenSystemsContainer
          * @brief System for managing complex movements of Entities.
          */
         ActionSystem * _action;
+        /**
+         * @brief System for managing rotation of drawable components.
+         */
+        RotateSystem * _rotate;
 };
 
 }

@@ -1,22 +1,46 @@
 {
-    "key": "Template",
+    "key": "map1",
     "systems": {
+        "camera": {
+            "components": {
+                "screenCam": {
+                    "renderPriority": 0,
+                    "scale": 1,
+                    "size": {
+                        "x": 1280,
+                        "y": 800
+                    },
+                    "default": true,
+                    "follows": ""
+                }
+            }
+        },
         "position": {
             "components": {
-                "0": {
+                "duck": {
                     "position": {
-                        "x": -27.5,
-                        "y": -30.5
+                        "x": -320,
+                        "y": 0
                     },
                     "velocity": {
                         "x": 0,
                         "y": 0
                     }
                 },
-                "1": {
+                "cross": {
                     "position": {
-                        "x": -27,
-                        "y": 69
+                        "x": 320,
+                        "y": 0
+                    },
+                    "velocity": {
+                        "x": 0,
+                        "y": 0
+                    }
+                },
+                "player": {
+                    "position": {
+                        "x": 0,
+                        "y": 0
                     },
                     "velocity": {
                         "x": 0,
@@ -27,15 +51,15 @@
         },
         "drawable": {
             "components": {
-                "0": {
+                "duck": {
                     "topDrawable": {
                         "__cpp_type": "ild::ImageDrawable",
                         "key": "ImageDrawable",
                         "inactive": false,
                         "renderPriority": 0,
                         "scale": {
-                            "x": 1,
-                            "y": 1
+                            "x": 2,
+                            "y": 2
                         },
                         "rotation": 0,
                         "positionOffset": {
@@ -58,7 +82,7 @@
                         }
                     }
                 },
-                "1": {
+                "cross": {
                     "topDrawable": {
                         "drawables": [
                             {
@@ -81,7 +105,7 @@
                                 },
                                 "inactive": false,
                                 "scale": {
-                                    "x": 0.3,
+                                    "x": 0.2,
                                     "y": 1
                                 },
                                 "key": "Shape0",
@@ -108,7 +132,7 @@
                                 "inactive": false,
                                 "scale": {
                                     "x": 1,
-                                    "y": 0.3
+                                    "y": 0.2
                                 },
                                 "key": "Shape1",
                                 "__cpp_type": "ild::ShapeDrawable"
@@ -123,8 +147,8 @@
                         },
                         "inactive": false,
                         "scale": {
-                            "x": 1,
-                            "y": 1
+                            "x": 2,
+                            "y": 2
                         },
                         "key": "topDrawable",
                         "__cpp_type": "ild::ContainerDrawable"
@@ -132,27 +156,23 @@
                 }
             }
         },
-        "camera": {
+        "rotate": {
             "components": {
-                "screenCam": {
-                    "renderPriority": 0,
-                    "scale": 1,
-                    "size": {
-                        "x": 800,
-                        "y": 600
-                    },
-                    "default": true,
-                    "follows": ""
+                "duck": {
+                    "speed": 0
+                },
+                "cross": {
+                    "speed": 0
                 }
             }
         },
         "collision": {
             "components": {
-                "0": {
+                "player": {
                     "dimension": {
                         "dimension": {
-                            "x": 10,
-                            "y": 10
+                            "x": 50,
+                            "y": 50
                         },
                         "position": {
                             "x": 0,
@@ -160,8 +180,8 @@
                         },
                         "rotation": 0
                     },
-                    "bodyType": "environment",
-                    "collisionType": "none",
+                    "bodyType": "solid",
+                    "collisionType": "player",
                     "oneWayNormal": {
                         "x": 0,
                         "y": 0
@@ -171,9 +191,10 @@
         }
     },
     "entities": [
-        "1",
         "screenCam",
-        "0"
+        "duck",
+        "cross",
+        "player"
     ],
     "assets": [
         {

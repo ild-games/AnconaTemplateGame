@@ -31,8 +31,8 @@ int main(int argc, const char *argv[])
     Config::Load(*FileOperations::GetInputFileStream("Config.txt"));
 
 
-    {{gameAbbr}}Game game(800, 600, new {{gameAbbr}}AndroidFactory());
+    {{gameAbbr}}Game game(1280, 800, new {{gameAbbr}}AndroidFactory());
     game.Run();
-    
+
     return 0;
 }
