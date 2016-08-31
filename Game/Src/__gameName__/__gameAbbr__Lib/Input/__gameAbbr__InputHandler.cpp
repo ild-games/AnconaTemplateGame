@@ -39,11 +39,12 @@ void {{gameAbbr}}InputComponent::RotateCross()
 void {{gameAbbr}}InputComponent::RotateEntity(const Entity & entity)
 {
     auto rotateComp = _systems.rotate()[entity];
-    if (rotateComp->speed() == 0)
+    if (!_systems.rotateDeceleration().EntityHasComponent(entity))
     {
-        rotateComp->speed(1.0f);
+        _systems.rotateDeceleration().CreateComponent(entity);
     }
-    else if (rotateComp->speed() < 2000.0f)
+    
+    if (rotateComp->speed() < 2000.0f)
     {
         rotateComp->speed(rotateComp->speed() + 25.0f);
     }
