@@ -16,6 +16,9 @@ class GameTouch: public {{gameAbbr}}InputHandler
          * @brief Captures input and calls out to the inputComponent's actions.
          */
         virtual void HandleInput(float delta) override;
+
+    private:
+        void HandleFingerPress(const int finger);
 };
 
 }

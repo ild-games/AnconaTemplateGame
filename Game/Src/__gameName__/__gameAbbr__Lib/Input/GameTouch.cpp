@@ -7,9 +7,15 @@ using namespace ild;
 
 void GameTouch::HandleInput(float delta)
 {
-    if (Touch::IsFingerPressed(0))
+    HandleFingerPress(0);
+    HandleFingerPress(1);
+}
+
+void GameTouch::HandleFingerPress(const int finger)
+{
+    if (Touch::IsFingerPressed(finger))
     {
-        auto mousePosition = sf::Touch::getPosition(0);
+        auto mousePosition = sf::Touch::getPosition(finger);
         if (mousePosition.x < 640)
         {
             _playerComponent->RotateDuck();
