@@ -4,7 +4,7 @@
 #include <Ancona/Framework/EntityFramework/UnorderedSystem.hpp>
 #include <Ancona/Framework/Serializing/Serializing.hpp>
 
-using namespace ild;
+using namespace ild {
 
 ////////// TEMPLATIZED SYSTEM SETUP INSTRUCTIONS
 /// Before using this you must initialize an instance of the template in your GameSystems class
@@ -54,5 +54,7 @@ class {{systemName}}System : public UnorderedSystem<{{systemName}}Component>
                 const Entity & entity);
 
 };
+
+}
 
 #endif
