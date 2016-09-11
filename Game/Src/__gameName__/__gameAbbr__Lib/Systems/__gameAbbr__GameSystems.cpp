@@ -11,6 +11,8 @@ using namespace ild;
     _drawable = ConstructSystem<DrawableSystem>("drawable", screenManager.Window, *_systemManager);
     _collision = ConstructSystem<CollisionSystem>("collision", *_systemManager,*_position);
     _action = ConstructSystem<ActionSystem>("action", *_systemManager, _position);
+    _rotate = ConstructSystem<RotateSystem>("rotate", *_systemManager, _drawable);
+    _rotateDeceleration = ConstructSystem<RotateDecelerationSystem>("rotateDeceleration", *_systemManager, _rotate);
 
     _collision->CreateType("none");
     _collision->CreateType("player");

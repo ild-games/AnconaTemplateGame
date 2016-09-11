@@ -2,7 +2,7 @@
 #define {{gameAbbr}}_Core_{{gameAbbr}}DesktopFactory_H_
 
 #include "{{gameAbbr}}PlatformFactory.hpp"
-#include "../Input/GameKeyboard.hpp"
+#include "../Input/GameKeyboardAndMouse.hpp"
 
 namespace ild
 {
@@ -14,7 +14,7 @@ class {{gameAbbr}}DesktopFactory : public {{gameAbbr}}PlatformFactory
 {
     public:
         /* getters and setters */
-        GameKeyboard * inputHandler() override;
+        GameKeyboardAndMouse * inputHandler() override;
 };
 
 }

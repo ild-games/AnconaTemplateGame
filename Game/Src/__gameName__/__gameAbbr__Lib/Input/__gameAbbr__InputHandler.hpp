@@ -28,7 +28,7 @@ class {{gameAbbr}}InputHandler : public InputHandler
         /**
          * @brief Captures input and calls out to the inputComponent's actions.
          */
-        virtual void HandleInput() { };
+        virtual void HandleInput(float delta) { };
 
         /* getters and setters */
         void systems({{gameAbbr}}GameSystems * systems) { _systems = systems; }
@@ -54,6 +54,25 @@ class {{gameAbbr}}InputComponent : public InputControlComponent
                 const Entity & player,
                 {{gameAbbr}}GameSystems & systems,
                 {{gameAbbr}}InputHandler & inputHandler);
+
+        /**
+         * @brief Rotates the duck entity
+         */
+        void RotateDuck();
+
+        /**
+         * @brief Rotates the cross entity
+         *
+         * @param delta time in milliseconds since last update
+         */
+        void RotateCross();
+
+        /**
+         * @brief Rotates a given entity
+         *
+         * @param entity Entity to rotate
+         */
+        void RotateEntity(const Entity & entity);
 
     private:
         Entity _playerEntity;

@@ -2,6 +2,7 @@
 #define {{gameAbbr}}_Systems_{{gameAbbr}}GameSystems_H_
 
 #include <Ancona/Core2D/Systems/CameraSystem.hpp>
+#include <Ancona/Core2D/Systems/RotateSystem.hpp>
 #include <Ancona/Core2D/Systems/Drawable/DrawableSystem.hpp>
 #include <Ancona/Core2D/Systems/InputControlSystem.hpp>
 #include <Ancona/Core2D/Systems/Collision/CollisionSystem.hpp>
@@ -9,6 +10,8 @@
 #include <Ancona/Framework/Screens/ScreenManager.hpp>
 #include <Ancona/Framework/Systems/ScreenSystemsContainer.hpp>
 #include <Ancona/Platformer/Actions/ActionSystem.hpp>
+
+#include "RotateDecelerationSystem.hpp"
 
 namespace ild
 {
@@ -31,6 +34,8 @@ class {{gameAbbr}}GameSystems : public ScreenSystemsContainer
         InputControlSystem & input() { return *_input; }
         PositionSystem & position() { return *_position; }
         ActionSystem & action() { return *_action; }
+        RotateSystem & rotate() { return *_rotate; }
+        RotateDecelerationSystem & rotateDeceleration() { return *_rotateDeceleration; }
         CameraSystem & camera() { return *_camera; }
         CollisionSystem & collision() { return *_collision; }
         CollisionType nullCollision() { return 0; }
@@ -59,6 +64,14 @@ class {{gameAbbr}}GameSystems : public ScreenSystemsContainer
          * @brief System for managing complex movements of Entities.
          */
         ActionSystem * _action;
+        /**
+         * @brief System for managing rotation of drawable components.
+         */
+        RotateSystem * _rotate;
+        /**
+         * @brief System for managing the deceleratoin of rotation components.
+         */
+        RotateDecelerationSystem * _rotateDeceleration;
 };
 
 }
