@@ -45,10 +45,10 @@ class RotateDecelerationComponent
         float decelerationSpeed() { return _decelerationSpeed; }
         void decelerationSpeed(float decelerationSpeed) { _decelerationSpeed = decelerationSpeed; }
     private:
-        RotateSystem * _rotateSystem;
-        RotateComponent * _rotateComponent;
-        float _decelerationSpeed;
-        Entity _entity;
+        RotateSystem * _rotateSystem = nullptr;
+        RotateComponent * _rotateComponent = nullptr;
+        float _decelerationSpeed = 0;
+        Entity _entity = nullentity;
 };
 
 /**
