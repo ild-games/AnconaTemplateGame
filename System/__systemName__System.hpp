@@ -4,7 +4,7 @@
 #include <Ancona/Framework/EntityFramework/UnorderedSystem.hpp>
 #include <Ancona/Framework/Serializing/Serializing.hpp>
 
-using namespace ild
+namespace ild
 {
 
 ////////// TEMPLATIZED SYSTEM SETUP INSTRUCTIONS
