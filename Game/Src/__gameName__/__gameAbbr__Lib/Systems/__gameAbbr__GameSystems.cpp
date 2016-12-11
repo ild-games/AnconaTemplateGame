@@ -13,8 +13,4 @@ using namespace ild;
     _action = ConstructSystem<ActionSystem>("action", *_systemManager, _position);
     _rotate = ConstructSystem<RotateSystem>("rotate", *_systemManager, _drawable);
     _rotateDeceleration = ConstructSystem<RotateDecelerationSystem>("rotateDeceleration", *_systemManager, _rotate);
-
-    _collision->CreateType("none");
-    _collision->CreateType("player");
-    _collision->CreateType("ground");
 }
