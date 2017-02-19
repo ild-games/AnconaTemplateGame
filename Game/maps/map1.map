@@ -92,40 +92,15 @@
                         "drawables": [
                             {
                                 "shape": {
-                                    "radius": 50,
+                                    "radiusWidth": 10,
+                                    "radiusHeight": 50,
                                     "fillColor": {
                                         "r": 128,
                                         "g": 255,
                                         "b": 255,
                                         "a": 255
                                     },
-                                    "__cpp_type": "sf::CircleShape"
-                                },
-                                "renderPriority": 0,
-                                "priorityOffset": 0,
-                                "rotation": 45,
-                                "anchor": {
-                                    "x": 0,
-                                    "y": 0
-                                },
-                                "inactive": false,
-                                "scale": {
-                                    "x": 0.2,
-                                    "y": 1
-                                },
-                                "key": "Shape0",
-                                "__cpp_type": "ild::ShapeDrawable"
-                            },
-                            {
-                                "shape": {
-                                    "radius": 50,
-                                    "fillColor": {
-                                        "r": 255,
-                                        "g": 128,
-                                        "b": 128,
-                                        "a": 255
-                                    },
-                                    "__cpp_type": "sf::CircleShape"
+                                    "__cpp_type": "sf::OvalShape"
                                 },
                                 "renderPriority": 0,
                                 "priorityOffset": 0,
@@ -137,7 +112,34 @@
                                 "inactive": false,
                                 "scale": {
                                     "x": 1,
-                                    "y": 0.2
+                                    "y": 1
+                                },
+                                "key": "Shape0",
+                                "__cpp_type": "ild::ShapeDrawable"
+                            },
+                            {
+                                "shape": {
+                                    "radiusWidth": 50,
+                                    "radiusHeight": 10,
+                                    "fillColor": {
+                                        "r": 255,
+                                        "g": 128,
+                                        "b": 128,
+                                        "a": 255
+                                    },
+                                    "__cpp_type": "sf::OvalShape"
+                                },
+                                "renderPriority": 0,
+                                "priorityOffset": 0,
+                                "rotation": 45,
+                                "anchor": {
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                "inactive": false,
+                                "scale": {
+                                    "x": 1,
+                                    "y": 1
                                 },
                                 "key": "Shape1",
                                 "__cpp_type": "ild::ShapeDrawable"
@@ -174,6 +176,10 @@
         "collision": {
             "components": {
                 "player": {
+                    "scale": {
+                        "x": 1,
+                        "y": 1
+                    },
                     "dimension": {
                         "dimension": {
                             "x": 50,
