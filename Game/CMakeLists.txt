@@ -50,5 +50,5 @@ target_link_libraries(<% gameName %> ${GAME_DEPS})
 
 configure_file(Config.txt ${AssetOutputDir}/Config.txt)
 configure_file(save.dat ${AssetOutputDir}/save.dat COPYONLY)
+configure_file(project/collision-types.json ${AssetOutputDir}/project/collision-types.json COPYONLY)
 file(COPY maps/ DESTINATION ${AssetOutputDir}/maps/)
-file(COPY project/ DESTINATION ${AssetOutputDir}/project/)
