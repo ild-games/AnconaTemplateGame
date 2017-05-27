@@ -8,5 +8,27 @@
             },
             "buildSystem" : "raft"
         }
+    ],
+    "architectures" : [
+        {
+            "platform" : "Host",
+            "architecture" : "Host"
+        },
+        {
+            "platform" : "Android",
+            "architecture" : "armeabi"
+        },
+        {
+            "platform" : "Android",
+            "architecture" : "armeabi-v7a"
+        },
+        {
+            "platform" : "Android",
+            "architecture" : "x86"
+        },
+        {
+            "platform" : "Android",
+            "architecture" : "mips"
+        }
     ]
 }
