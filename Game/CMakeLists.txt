@@ -22,9 +22,9 @@ set (GAME_DEPS
     Ancona_Util
     Ancona_System
 
-    sfml-graphics
-    sfml-window
-    sfml-system
+    optimized sfml-graphics debug sfml-graphics-d
+    optimized sfml-window debug sfml-window-d
+    optimized sfml-system debug sfml-system-d
 
     jsoncpp)
 

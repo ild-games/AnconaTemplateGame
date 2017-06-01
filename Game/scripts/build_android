@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd $SCRIPT_DIR/..
+
+rm -rf build/
+raft build -r -p Android -a x86
+raft build -r -p Android -a armeabi
+
+(cd Projects/Android; rm -rf build/*; ./gradlew assembleRelease)
+
+cp Projects/Android/build/outputs/apk/* build/
